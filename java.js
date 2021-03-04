@@ -48,7 +48,7 @@ var chart = new Chart(ctx, {
     data: {
         labels: ['Male', 'Female'],
         datasets: [{
-            label: 'Distribution of astronauts',
+            label: 'The divison of astranours',
             backgroundColor: ["#B3DDF3", "#ffb6c1"],
             borderColor: '#FFFFFF',
             data: [501, 65]

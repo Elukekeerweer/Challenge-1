@@ -56,6 +56,8 @@ p {
   transition: width 0.6s;
 }
 
+
+
 li {
 	font-family: unibody-8-small-caps-new, sans-serif;
 }
@@ -66,6 +68,7 @@ nav {
   left: 0px;
   overflow: hidden;
   height: 100vh; 
+  width: 100vw;
   display: flex;
   flex-flow: column;
   padding: 0;
@@ -149,28 +152,21 @@ body{
   grid-area: foot;
 }
 
-
-/*.parallax {
-	background-image: url("rocket.jpg");
-	min-height: 600px;
-	background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-   
-}*/
-
+ .header {
+    width: 100vw;
+  }
 
 
 @media only screen and (min-width: 768px){
   body{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr  ;
     grid-template-areas: 
-          "title title title"
-          "menu  menu  menu"
-          "main  main  main"
-          "ad1 ad1  ad2"
-          "foot  foot  foot"; 
+          "title title "
+          "menu  menu  "
+          "main  main  "
+          "ad1 ad2  "
+          "foot  foot  "; 
   }
 
 
@@ -202,27 +198,29 @@ body{
     display: none;
   }
 
-  #menu {
-  	width: 750px;
-  }
 
   .header {
-  	width: 750px;
+    width: 100vw;
   }
 
-  p{
-  	margin-right: 30px;
+  .main {
+  	margin-bottom: 10px;
   }
-  
 
-  .ad1 {
-  	width: 384px;
+  #tekst {
+  	display: flex;
+  	justify-content: center;
+  	font-size: 20px;
+  }
+
+ /* .ad1 {
+  	width: 364px;
   	margin-bottom: 12px;
   }
 
   .ad2 {
-  	width: 384px;
-  }
+  	width: 364px;
+  }*/
 
   .active, .inactive {
     width: unset;
@@ -233,7 +231,7 @@ body{
 
   li {
   font-family: unibody-8-new, sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   }
 
   nav {
@@ -256,5 +254,60 @@ body{
     justify-content: center;
     border: none;
   }
+
+
+@media only screen and (min-width: 1024px){
+  body{
+    display: grid;
+    grid-template-columns: 1fr 1fr  ;
+    grid-template-areas: 
+          "title title "
+          "menu  menu  "
+          "main  main "
+          "ad1 ad2  "
+          "foot  foot  "; 
+  }
+
+
+  .header{
+	  grid-area: title;
+	} 
+
+	.main{
+	  grid-area: main;
+	}
+
+	#menu {
+	  grid-area: menu;
+	}
+
+	.ad1 {
+	  grid-area: ad1;
+	}
+
+	.ad2 {
+	  grid-area: ad2;
+	}
+
+	.foot {
+	  grid-area: foot;
+	}
+
+	p {
+		font-size: 25px;
+		margin: 15px;
+	}
+
+	#tekst {
+		display:flex;
+		justify-content: center;
+	}
+
+	#foot {
+		font-size: 18px;
+	}
+
+
+  
 }
 
