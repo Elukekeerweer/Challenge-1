@@ -68,7 +68,7 @@ nav {
   left: 0px;
   overflow: hidden;
   height: 100vh; 
-  width: 100vw;
+  width: 100vw ;
   display: flex;
   flex-flow: column;
   padding: 0;
@@ -308,6 +308,62 @@ body{
 	}
 
 
+  
+
+@media only screen and (min-width: 1024px){
+  body{
+    display: grid;
+    grid-template-columns: 1fr 1fr  ;
+    grid-template-areas: 
+          "title title "
+          "menu  menu  "
+          "main  main "
+          "ad1 ad2  "
+          "foot  foot  "; 
+  }
+
+
+  .header{
+    grid-area: title;
+  } 
+
+  .main{
+    grid-area: main;
+  }
+
+  #menu {
+    grid-area: menu;
+  }
+
+  .ad1 {
+    grid-area: ad1;
+  }
+
+  .ad2 {
+    grid-area: ad2;
+  }
+
+  .foot {
+    grid-area: foot;
+  }
+
+  p {
+    font-size: 25px;
+    margin: 15px;
+  }
+
+  #tekst {
+    display:flex;
+    justify-content: center;
+  }
+
+  #foot {
+    font-size: 18px;
+  }
+
+  header {
+    width: 100vw;
+  }
   
 }
 
